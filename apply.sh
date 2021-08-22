@@ -7,8 +7,9 @@ ONLY_THIS=
 usage () {
   echo "apply.sh [-h] [-c TYPE] [-y]";
   echo "  -h  Show this help";
-  echo "  -c  Select package to apply the desired config, e.g. -y rofi";
-  echo "  -y  Bypass confirmation";
+  echo "  -c  Select package to apply the desired config, e.g. -c rofi";
+  echo "  -b  Bypass confirmation";
+  echo "  -r  Restart the i3 instance after the apply process"
 }
 
 log_ () {
