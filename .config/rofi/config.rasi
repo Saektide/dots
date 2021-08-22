@@ -1,0 +1,59 @@
+/* -*- mode: css; -*- */
+
+configuration {
+  window-format: "{n}";
+}
+
+* {
+  background-color: transparent;
+  font: "JetBrainsMono Nerd Font Mono 12";
+}
+
+#window {
+  padding: 30px;
+  background-color: #1D2125;
+  text-color: #91A3CB;
+  width: 400px;
+}
+
+#listview {
+  margin: 10px 0 0 0;
+  spacing: 4px;
+  lines: 10;
+  background-color: #1D2125;
+  text-color: #91A3CB;
+}
+
+inputbar {
+  padding: 1px;
+  background-color: #1D2125;
+  text-color: #91A3CB;
+}
+
+entry {
+  margin: 0 0 0 10px;
+  border: 0 0 1px 0;
+  border-color: #E29298;
+  text-color: #91A3CB;
+}
+
+prompt {
+  text-color: #E29298;
+}
+
+#entry {
+  padding: 0px 4px;
+}
+
+#element {
+  padding: 0px 2px;
+  background-color: #1D2125;
+  text-color: #91A3CB;
+  padding: 5px 10px;
+}
+
+#element selected {
+  background-color: #262B30;
+  text-color: #9DB3D8;
+  border-radius: 4px;
+}

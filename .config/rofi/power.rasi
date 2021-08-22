@@ -1,0 +1,13 @@
+/* -*- mode: css; -*- */
+
+configuration {
+  window-format: "{n}";
+}
+
+#window {
+  width: 300px;
+}
+
+#listview {
+  lines: 6;
+}
