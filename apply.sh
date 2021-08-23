@@ -49,12 +49,12 @@ apply_config () {
     return
   fi
   log_ "applying config :: $2..."
-  cp ".config/$1" /home/$WHO/".config/$1"
+  cp ".config/$1" "/home/$WHO/.config/$1"
 }
 
 apply_script () {
   log_ "applying script :: $2..."
-  cp ".scripts/$1" /home/$WHO/".scripts/$1"
+  cp ".scripts/$1" "/home/$WHO/.scripts/$1"
 }
 
 apply_etc () {
@@ -85,8 +85,7 @@ log_pause
 
 log_ "copying assets..."
 
-cp bg.jpg /home/$WHO/bg_.jpg
-cp pyro.png /home/$WHO/pyro_.png
+cp bg.jpg pyro.png "/home/$WHO"
 
 apply_config polybar/config       "polybar - config"        polybar
 apply_config polybar/launch.sh    "polybar - launch script" polybar
