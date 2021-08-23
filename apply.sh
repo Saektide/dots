@@ -49,12 +49,12 @@ apply_config () {
     return
   fi
   log_ "applying config :: $2..."
-  cp ".config/$1" ~/".config/$1"
+  cp ".config/$1" /home/$WHO/".config/$1"
 }
 
 apply_script () {
   log_ "applying script :: $2..."
-  cp ".scripts/$1" ~/".scripts/$1"
+  cp ".scripts/$1" /home/$WHO/".scripts/$1"
 }
 
 apply_etc () {
@@ -76,7 +76,8 @@ while getopts ":hbrc:" opt; do
   esac
 done
 
-log_ "this is @$(logname)"
+WHO="$(logname)"
+log_ "this is @$WHO"
 
 [ "$UID" -eq 0 ] || log_err "you must start this script with sudo"
 
@@ -84,8 +85,8 @@ log_pause
 
 log_ "copying assets..."
 
-cp bg.jpg ~/bg_.jpg
-cp pyro.png ~/pyro_.png
+cp bg.jpg /home/$WHO/bg_.jpg
+cp pyro.png /home/$WHO/pyro_.png
 
 apply_config polybar/config       "polybar - config"        polybar
 apply_config polybar/launch.sh    "polybar - launch script" polybar
