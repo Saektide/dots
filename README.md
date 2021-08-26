@@ -6,7 +6,6 @@ Dotfiles exclusively for [i3-gaps](https://github.com/Airblader/i3).
 
 > ⚠️ **Before you install**
 > * Do a backup of your dotfiles.
-> * Once cloned the repo, go to `.config/i3/config` (repo folder), look for `xrandr` and **replace** the output and the mode.
 > * Do a double check of the `i3` config file (`.config/i3/config` again, in the repo folder) and make sure all it's ok for your environment.
 
 ## packages
@@ -48,6 +47,7 @@ sudo ./apply.sh -r
 * `-c` Select a module/package to apply the desired config.
 * `-r` Restart the i3 instance after apply process.
 * `-b` Bypass the confirmation (press any key to continue).
+* `-o` Apply files that are in the `.other` folder.
 
 ### examples
 Apply dotfiles only for `rofi` and bypass the confirmation prompt.
@@ -66,11 +66,6 @@ git pull && sudo ./apply.sh
 ```
 
 ## troubleshooting
-
-### My screen resolution changed and i want to revert it
-Check in the repo folder, the i3 config file `.config/i3/config`, look for `xrandr` and **replace** the resolution and the output.
-
-If you don't have any idea of that, simply run `xrandr` in your terminal and you will be able to see the available outputs and modes for your screen(s). e.g. - if you have a VGA monitor should be marked as "VGA-0" or similar, that's the `output`. For mode it's just the resolution e.g. `1360x768` so if you want to apply all that, simply put `xrandr --output VGA-0 --mode 1360x768` in the i3 config.
 
 ### I have another version of picom.
 Simply remove that version and install the ibhagwan's version. Kill the process (`pkill picom`) before do this. If you're in Arch simply do `yay -R picom` and then `yay -S picom-ibhagwan-git`.

@@ -2,14 +2,16 @@
 
 BYPASS=false
 RESTART=false
+APPLY_OTHER=false
 ONLY_THIS=
 
 usage () {
-  echo "apply.sh [-h] [-c TYPE] [-b] [-r]";
+  echo "apply.sh [-h] [-c TYPE] [-b] [-r] [-o]";
   echo "  -h  Show this help";
   echo "  -c  Select package to apply the desired config, e.g. -c rofi";
   echo "  -b  Bypass confirmation";
-  echo "  -r  Restart the i3 instance after the apply process"
+  echo "  -r  Restart the i3 instance after the apply process";
+  echo "  -o  Apply files that are in the .other folder";
 }
 
 log_ () {
@@ -65,12 +67,21 @@ apply_etc () {
   cp ".etc/$1" "/etc/$2"
 }
 
-while getopts ":hbrc:" opt; do
+apply_other () {
+  if [[ $APPLY_OTHER != true ]]; then
+    return
+  fi
+  log_ "applying other file :: $3..."
+  cp ".other/$1" "$2"
+}
+
+while getopts ":hbrc:o" opt; do
   case "$opt" in 
     h) usage; exit ;;
     b) BYPASS=true ;;
     r) RESTART=true ;;
     c) ONLY_THIS="$OPTARG" ;;
+    o) APPLY_OTHER=true ;;
     :) log_err "missing argument for option -$OPTARG" ;;
     \?) log_err "unknown option -$OPTARG" ;;
   esac
@@ -96,10 +107,12 @@ apply_config neofetch/config.conf "neofetch - config"       neofetch
 apply_config rofi/config.rasi     "rofi - config"           rofi
 apply_config rofi/power.rasi      "rofi - power menu theme" rofi
 
-apply_script lock.sh "lock screen"
-apply_script spotify_status.py "spotify status"
+apply_script lock.sh              "lock screen"
+apply_script spotify_status.py    "spotify status"
 
-apply_etc picom.conf "xdg/picom.conf" "picom - config" picom
+apply_etc   picom.conf "xdg/picom.conf" "picom - config" picom
+
+apply_other .xprofile  "/home/$WHO/.xprofile"    "Xprofile"       xprofile
 
 i3restart
 log_ "finished!"
