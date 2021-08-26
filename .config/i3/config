@@ -139,9 +139,8 @@ bindsym $mod+r mode "resize"
 # Autoexec @ Init
 exec picom -b
 # Autoexec @ Reload
-exec_always xrandr --output HDMI-0 --mode 1920x1080
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always feh --bg-fill ~/_bg.jpg
+exec_always feh --bg-fill $HOME/bg_.jpg
 
 for_window [class=".*"] border pixel 0
 client.focused #4b505f #4b505f #4b505f #4b505f
