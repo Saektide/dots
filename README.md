@@ -1,6 +1,6 @@
-# dots
+# dots (void variant)
 ![Sample](sample.png)
-[Background](bg.jpg) | [neofetch Icon](pyro.png)
+[Background](bg.jpg)
 
 Dotfiles exclusively for [i3-gaps](https://github.com/Airblader/i3).
 
@@ -14,7 +14,6 @@ Dotfiles exclusively for [i3-gaps](https://github.com/Airblader/i3).
 * [polybar](https://github.com/polybar/polybar)
 * [cava](https://github.com/karlstav/cava) (optional)
 * [zsh](https://github.com/ohmyzsh/ohmyzsh) (optional)
-* [xrandr](https://www.x.org/wiki/Projects/XRandR/)
 * [feh](https://github.com/derf/feh)
 * [rofi](https://github.com/davatorium/rofi)
 
@@ -25,7 +24,7 @@ Dotfiles exclusively for [i3-gaps](https://github.com/Airblader/i3).
 * **font** [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
 * **icons**
   * [Material Icons](https://fonts.google.com/icons?selected=Material+Icons)
-  * [FontAwesome Icons 5](https://fontawesome.com/v5.15/how-to-use/on-the-desktop/setup/getting-started)
+  * [Feather Icons](https://github.com/AT-UI/feather-font)
 * **power menu** [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
 
 ## quick install (Arch)

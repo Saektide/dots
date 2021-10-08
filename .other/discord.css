@@ -1,0 +1,121 @@
+:root {
+  --text-normal: #FBE8E5;
+}
+
+.appMount-3lHmkl {
+  background: #2A2733;
+  font-family: 'JetBrainsMono Nerd Font', Inter, monospace;
+}
+
+.app-2rEoOp {
+  background: #2A2733;
+}
+
+.scroller-1Bvpku.none-2Eo-qx.scrollerBase-289Jih {
+  background: #2A2733;
+}
+
+.container-1r6BKw.themed-ANHk51 {
+  background: #2A2733;
+}
+
+nav.container-3w7J-x {
+  background: #2A2733;
+}
+
+.panels-j1Uci_ {
+  background: #2A2733;
+  border: 1px solid #54496E;
+  border-bottom: 0;
+}
+
+.chat-3bRxxu {
+  background: #2A2733;
+}
+
+.members-1998pB, .members-1998pB>div {
+  background: #2A2733;
+}
+
+.auto-Ge5KZx::-webkit-scrollbar-thumb {
+  background-color: #54496E;
+}
+
+.auto-Ge5KZx::-webkit-scrollbar-track {
+  background-color: #302d38;
+}
+
+.scrollableContainer-2NUZem {
+  background: #2A2733;
+  border-radius: 0;
+  border: 1px solid #54496E;
+}
+
+.channelTextAreaDisabled-8rmlrp .scrollableContainer-2NUZem {
+  opacity: 1;
+  border-color: transparent;
+  text-align: center;
+}
+
+.form-2fGMdU:before,
+.buttons-3JBrkn > button[aria-label="Send a gift"] {
+  display: none;
+}
+
+.isUnread-3Ef-o9 {
+  border-color: #bd2c40;
+}
+
+.isUnread-3Ef-o9 svg {
+  display: none;
+}
+
+.isUnread-3Ef-o9 span.unreadPill-2HyYtt {
+  background: #bd2c40;
+  font-size: 12pt;
+  height: auto;
+  left: 50%;
+  border-radius: 0;
+  right: unset;
+  transform: translateX(-50%) translateY(-50%);
+  line-height: normal;
+  padding: .25rem .75rem;
+  font-family: 'JetBrainsMono Nerd Font', monospace;
+  top: 0;
+  letter-spacing: .1rem;
+  font-weight: 400;
+}
+
+.username-1A8OIy {
+  filter: grayscale(25%) contrast(0.5) brightness(110%);
+}
+
+.cozy-3raOZG .timestamp-3ZCmNB {
+  color: #54496E;
+}
+
+.header-2V-4Sw,
+.base-1x0h_U {
+  font-family: 'JetBrainsMono Nerd Font', Inter;
+}
+
+.name-23GUGE, .icon-1DeIlz {
+  color: #54496E;
+}
+
+.modeMuted-onO3r- .icon-1DeIlz, .modeMuted-onO3r- .name-23GUGE {
+  color: #453e54;
+}
+
+.modeSelected-346R90 .content-1x5b-n, .modeSelected-346R90:hover .content-1x5b-n {
+  background: transparent;
+  border-color: #54496E;
+}
+
+.content-1x5b-n {
+  border: 1px solid transparent;
+}
+
+.app-1q1i1E {
+  border: 1px solid #54496E;
+}

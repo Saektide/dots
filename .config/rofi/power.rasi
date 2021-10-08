@@ -4,10 +4,91 @@ configuration {
   window-format: "{n}";
 }
 
-#window {
-  width: 300px;
+* {
+  background-color: transparent;
+  font: "JetBrainsMono Nerd Font Mono 12";
+  border: 0;
 }
 
-#listview {
+window {
+  padding: 30px;
+  background-color: #281E2E;
+  text-color: #F9B3A8;
+  width: 300px;
+  border: 0;
+}
+
+listview {
+  margin: 10px 0 0 0;
+  spacing: 4px;
   lines: 6;
+  background-color: #281E2E;
+  text-color: #F9B3A8;
+  border: 0;
+}
+
+inputbar {
+  padding: 1px;
+  background-color: #281E2E;
+  text-color: #F9B3A8;
+}
+
+entry {
+  margin: 0 0 0 10px;
+  border: 0 0 1px 0;
+  border-color: #54496E;
+  text-color: #F9B3A8;
+}
+
+prompt {
+  text-color: #54496E;
+}
+
+entry {
+  padding: 0px 2px;
+}
+
+element {
+  padding: 0px 2px;
+  background-color: #281E2E;
+  text-color: #F9B3A8;
+  padding: 5px 10px;
+}
+
+element-text {
+  text-color: #F9B3A8;
+}
+
+element.normal.normal,
+element.normal.urgent,
+element.normal.active,
+element.alternate.normal,
+element.alternate.urgent,
+element.alternate.active {
+  background-color: #281E2E;
+  text-color: #F9B3A8;
+}
+
+element.selected.normal {
+  background-color: #4A3C53;
+  text-color: #F9B3A8;
+}
+
+scrollbar {
+  width: 4px;
+  border: 0;
+  handle-color: #E96C7D;
+  handle-width: 8px;
+  padding: 0;
+}
+
+message {
+  border: 0;
+  padding: 1px;
+  text-color: #F9B3A8;
+}
+
+textbox-prompt-colon {
+  expand: false;
+  str: "";
 }

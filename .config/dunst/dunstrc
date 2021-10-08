@@ -3,7 +3,7 @@
 
     monitor = 0
     follow = mouse
-    geometry = "300x5-14+67"
+    geometry = "300x5-30+60"
     progress_bar = false
     # progress_bar_height = 10
     # progress_bar_frame_width = 1
@@ -18,8 +18,8 @@
     padding = 8
     horizontal_padding = 14
     text_icon_padding = 0
-    frame_width = 0
-    frame_color = "#aaaaaa"
+    frame_width = 1
+    frame_color = "#54496E"
     separator_color = frame
     sort = yes
     idle_threshold = 0
@@ -46,7 +46,7 @@
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+    icon_path = /usr/share/icons/HighContrast/16x16/status/
 
     # @ History
 
@@ -98,14 +98,14 @@
     # context = ctrl+shift+period
 
 [urgency_low]
-    background = "#1D2125"
-    foreground = "#91A3CB"
+    background = "#2A2733"
+    foreground = "#F9B3A8"
     timeout = 10
 
 [urgency_normal]
-    background = "#1F242C"
-    foreground = "#B3C6DE"
-    timeout = 10
+    background = "#2A2733"
+    foreground = "#F9B3A8"
+    timeout = 15
 
 [urgency_critical]
     background = "#3d2525"

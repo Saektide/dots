@@ -60,7 +60,7 @@ apply_script () {
 }
 
 apply_etc () {
-  if [[ $4 = "$ONLY_THIS" ]]; then
+  if [[ $ONLY_THIS && ! $4 = "$ONLY_THIS" ]]; then
     return
   fi
   log_ "applying etc file :: $3..."
@@ -96,7 +96,7 @@ log_pause
 
 log_ "copying assets..."
 
-cp bg.jpg pyro.png "/home/$WHO"
+cp bg.png pyro.png "/home/$WHO"
 
 apply_config polybar/config       "polybar - config"        polybar
 apply_config polybar/launch.sh    "polybar - launch script" polybar
@@ -110,9 +110,9 @@ apply_config rofi/power.rasi      "rofi - power menu theme" rofi
 apply_script lock.sh              "lock screen"
 apply_script spotify_status.py    "spotify status"
 
-apply_etc   picom.conf "xdg/picom.conf" "picom - config" picom
+apply_etc    picom.conf "xdg/picom.conf"       "picom - config" picom
 
-apply_other .xprofile  "/home/$WHO/.xprofile"    "Xprofile"       xprofile
+apply_other  .xprofile  "/home/$WHO/.xprofile" "Xprofile"       xprofile
 
 i3restart
 log_ "finished!"
