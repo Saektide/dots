@@ -1,8 +1,8 @@
-# dots (void variant)
+# Dots (e6 variant)
 ![Sample](sample.png)
-[Background](bg.jpg)
+[Background](bg.png)
 
-Dotfiles exclusively for [i3-gaps](https://github.com/Airblader/i3).
+Dotfiles exclusively for [i3](https://github.com/Airblader/i3).
 
 > ⚠️ **Before you install**
 > * Do a backup of your dotfiles.
@@ -10,27 +10,27 @@ Dotfiles exclusively for [i3-gaps](https://github.com/Airblader/i3).
 
 ## packages
 * [a forked version of picom](https://github.com/ibhagwan/picom)
-* [kitty](https://github.com/kovidgoyal/kitty)
 * [polybar](https://github.com/polybar/polybar)
-* [cava](https://github.com/karlstav/cava) (optional)
-* [zsh](https://github.com/ohmyzsh/ohmyzsh) (optional)
 * [feh](https://github.com/derf/feh)
 * [rofi](https://github.com/davatorium/rofi)
+
+## optional packages
+* [kitty](https://github.com/kovidgoyal/kitty)
+* [cava](https://github.com/karlstav/cava)
+* [zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 ## polybar - third party modules
 * [polybar-spotify](https://github.com/Jvanrhijn/polybar-spotify) (already included in this repo, might be outdated)
 
 ## other
 * **font** [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
-* **icons**
-  * [Material Icons](https://fonts.google.com/icons?selected=Material+Icons)
-  * [Feather Icons](https://github.com/AT-UI/feather-font)
+* **icons** Feather Icons ([source](https://github.com/feathericons/feather))
 * **power menu** [rofi-power-menu](https://github.com/jluttine/rofi-power-menu)
 
 ## quick install (Arch)
 1. Install required packages.
 ```sh
-yay -S picom-ibhagwan-git kitty polybar xrandr feh rofi
+yay -S picom-ibhagwan-git polybar feh rofi
 ```
 2. Clone the repo and `cd` to it.
 ```sh
@@ -40,6 +40,7 @@ git clone https://github.com/Saektide/dots.git && cd dots
 ```sh
 sudo ./apply.sh -r
 ```
+4. Install [rofi-power-menu](https://github.com/jluttine/rofi-power-menu).
 
 ## apply script (options)
 * `-h` Show the help screen.
@@ -62,6 +63,16 @@ sudo ./apply.sh -c i3 -b -r
 If you want to keep up-to-date your dotfiles with this repo, do a `cd` to the repo folder, pull the changes and re-apply them.
 ```
 git pull && sudo ./apply.sh
+```
+
+## switch variant
+Make sure you've updated this repo in your local machine, you can see the available branches of variants by using `git branch` command.
+```sh
+git branch -a
+```
+For example, if you want to use the `boundaries` variant, simply use this:
+```sh
+git checkout boundaries
 ```
 
 ## troubleshooting

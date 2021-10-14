@@ -18,8 +18,8 @@
     padding = 8
     horizontal_padding = 14
     text_icon_padding = 0
-    frame_width = 1
-    frame_color = "#54496E"
+    frame_width = 0
+    frame_color = "#003166"
     separator_color = frame
     sort = yes
     idle_threshold = 0
@@ -56,7 +56,7 @@
     # @ Misc
 
     dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/brave
+    browser = /usr/bin/firefox
     always_run_script = true
     title = Dunst
     class = Dunst
@@ -98,16 +98,16 @@
     # context = ctrl+shift+period
 
 [urgency_low]
-    background = "#2A2733"
-    foreground = "#F9B3A8"
+    background = "#000A14"
+    foreground = "#FAF4EA"
     timeout = 10
 
 [urgency_normal]
-    background = "#2A2733"
-    foreground = "#F9B3A8"
+    background = "#000A14"
+    foreground = "#FAF4EA"
     timeout = 15
 
 [urgency_critical]
-    background = "#3d2525"
-    foreground = "#ffb0b0"
+    background = "#E59E9E"
+    foreground = "#452121"
     timeout = 30

@@ -2,20 +2,13 @@
 ; # https://github.com/polybar/polybar
 
 [colors]
-background = #281E2E
-background-alt = #4A3C53
-foreground = #D8CBE1
-foreground-alt = #985587
-primary = #ffb52a
+background = #002955
+background-alt = #003876
+foreground = #FFF8DF
+foreground-alt = #F9E8C6
+primary = #FDB423
 secondary = #e60053
 alert = #bd2c40
-
-c1 = #9AEFCE
-c2 = #7E9AD3
-c3 = #9276E5
-c4 = #F5DB99
-c5 = #EF7B83
-c6 = #E2A6CA
 
 [bar/main]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -75,9 +68,9 @@ cursor-scroll = ns-resize
 type = internal/temperature
 interval = 1
 
-format-prefix = "  "
+format-prefix = " "
 format-prefix-font = 5
-format-prefix-foreground = ${colors.c4}
+format-prefix-foreground = ${colors.primary}
 
 thermal-zone = 0
 hwmon-path = /sys/devices/pci0000:00/0000:00:09.0/0000:02:00.0/hwmon/hwmon1/temp1_input
@@ -111,9 +104,9 @@ interval = 25
 
 mount-0 = /
 
-format-mounted-prefix = "   "
+format-mounted-prefix = " "
 format-mounted-prefix-font = 5
-format-mounted-prefix-foreground = ${colors.c1}
+format-mounted-prefix-foreground = ${colors.primary}
 label-mounted = %used%
 label-unmounted = %mountpoint% (404)
 label-unmounted-foreground = ${self.format-mounted-prefix-foreground}
@@ -171,17 +164,17 @@ label-urgent-padding = ${self.label-focused-padding}
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "  "
+format-prefix = " "
 format-prefix-font = 5
-format-prefix-foreground = ${colors.c3}
+format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "   "
+format-prefix = " "
 format-prefix-font = 5
-format-prefix-foreground = ${colors.c2}
+format-prefix-foreground = ${colors.primary}
 label = %percentage_used%%
 
 [module/wlan]
@@ -190,7 +183,7 @@ interface = wlp1s10
 interval = 3.0
 
 format-connected-prefix = "  "
-format-connected-prefix-foreground = ${colors.c5}
+format-connected-prefix-foreground = ${colors.primary}
 format-connected-prefix-font = 5
 format-connected = <label-connected>
 label-connected = %local_ip%
@@ -232,14 +225,14 @@ label = %date%%time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume-prefix = "   "
+format-volume-prefix = " "
 format-volume-prefix-font = 5
-format-volume-prefix-foreground = ${colors.c6}
+format-volume-prefix-foreground = ${colors.primary}
 format-volume = <label-volume>
 label-volume = %percentage%%
 label-volume-foreground = ${colors.foreground}
 
-format-muted-prefix = "   "
+format-muted-prefix = " "
 format-muted-prefix-font = 5
 format-muted-prefix-foreground = ${self.format-volume-prefix-foreground}
 format-muted = <label-muted>
@@ -260,10 +253,10 @@ click-middle = playerctl --player=spotify previous
 
 [module/powermenu]
 type = custom/text
-content = 
+content =  
 content-font = 5
 content-padding = 1
-content-foreground = ${colors.foreground-alt}
+content-foreground = ${colors.primary}
 click-left = rofi -show power-menu -modi power-menu:rofi-power-menu -theme power
 
 [settings]

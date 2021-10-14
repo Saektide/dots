@@ -12,7 +12,7 @@ configuration {
 
 window {
   padding: 30px;
-  background-color: #281E2E;
+  background-color: #001429;
   text-color: #F9B3A8;
   width: 400px;
   border: 0;
@@ -22,14 +22,14 @@ listview {
   margin: 10px 0 0 0;
   spacing: 4px;
   lines: 10;
-  background-color: #281E2E;
+  background-color: #001429;
   text-color: #F9B3A8;
   border: 0;
 }
 
 inputbar {
   padding: 1px;
-  background-color: #281E2E;
+  background-color: #001429;
   text-color: #F9B3A8;
 }
 
@@ -50,7 +50,7 @@ entry {
 
 element {
   padding: 0px 2px;
-  background-color: #281E2E;
+  background-color: #001429;
   text-color: #F9B3A8;
   padding: 5px 10px;
 }
@@ -59,19 +59,19 @@ element.normal.normal,
 element.normal.urgent,
 element.normal.active,
 element.alternate.normal {
-  background-color: #281E2E;
+  background-color: #001429;
   text-color: #F9B3A8;
 }
 
 element.selected.normal {
-  background-color: #4A3C53;
-  text-color: #F9B3A8;
+  background-color: #003166;
+  text-color: #FAF4EA;
 }
 
 scrollbar {
   width: 4px;
   border: 0;
-  handle-color: #E96C7D;
+  handle-color: #FDB423;
   handle-width: 8px;
   padding: 0;
 }

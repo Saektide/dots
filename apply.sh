@@ -46,10 +46,17 @@ i3restart () {
   fi
 }
 
+fallback_dir () {
+  if [[ ! -d $1 ]]; then
+    mkdir $1
+  fi
+}
+
 apply_config () {
   if [[ $ONLY_THIS && ! $3 = "$ONLY_THIS" ]]; then
     return
   fi
+  fallback_dir "/home/$WHO/.config/$3"
   log_ "applying config :: $2..."
   cp ".config/$1" "/home/$WHO/.config/$1"
 }
@@ -75,6 +82,14 @@ apply_other () {
   cp ".other/$1" "$2"
 }
 
+apply_fonts () {
+  fallback_dir "/home/$WHO/.fonts"
+  log_ "applying font files..."
+  cp .fonts/* "/home/$WHO/.fonts/"
+  log_ "refreshing font cache..."
+  fc-cache -f
+}
+
 while getopts ":hbrc:o" opt; do
   case "$opt" in 
     h) usage; exit ;;
@@ -96,6 +111,9 @@ log_pause
 
 log_ "copying assets..."
 
+fallback_dir "/home/$WHO/.config"
+fallback_dir "/home/$WHO/.scripts"
+
 cp bg.png pyro.png "/home/$WHO"
 
 apply_config polybar/config       "polybar - config"        polybar
@@ -113,6 +131,8 @@ apply_script spotify_status.py    "spotify status"
 apply_etc    picom.conf "xdg/picom.conf"       "picom - config" picom
 
 apply_other  .xprofile  "/home/$WHO/.xprofile" "Xprofile"       xprofile
+
+apply_fonts
 
 i3restart
 log_ "finished!"
